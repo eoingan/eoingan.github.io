@@ -1,0 +1,117 @@
+
+/* Trinity Theme 1.0 October 2012 */
+html {
+	margin:0;
+	padding:0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+}
+body {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	font-size:0.83333em;
+	color:#494949;
+	line-height:1.5;
+}
+
+
+html,body {
+	background:#ffffff;
+}
+
+.container{
+	display: grid;
+	background-color: #ffffff;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 'tl .'
+						'bnr bnr';
+}
+
+#trinity-logo{
+	grid-area: tl;
+	height: 100%;
+	background-color:#ffffff;
+}
+
+#banner{
+	grid-area: bnr;
+	background-color: #1074b7;
+	padding: 1em 1em;
+	text-align: center;
+	font-size: 1em;
+	color: #ffffff;
+}
+#user-form{
+	margin: 10px 10px;
+	padding: 10px 10px;
+
+}
+
+#information-blocks{
+	margin: 25px 25px;
+	padding:25px 25px;
+}
+
+.information-wrapper{
+	display: none;
+}
+
+[epub-type="stretchsummary"],
+[epub\:type="stretchsummary"],
+.stretchsummary {
+	/*border: 1px dashed gray;*/
+	font: weight bold;
+	cursor: pointer;
+	color: #1074b7; 
+	text-decoration: none;
+}
+
+[epub-type="stretchsummary"]:hover,
+[epub\:type="stretchsummary"]:hover,
+.stretchsummary:hover {
+	border-style: solid;
+	color: #1074b7; 
+}
+
+[epub-type="stretchsummary"]::after,
+[epub\:type="stretchsummary"]::after,
+.stretchsummary::after {
+	content: "\00bb"; /* >> character */
+	color: #88886d;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+[epub-type="stretchsummary"] + [epub-type="stretchdetail"],
+[epub\:type="stretchsummary"] + [epub\:type="stretchdetail"],
+.stretchsummary + .stretchdetail {
+	margin-left: 0.1em;
+}
+
+[epub-type="stretchdetail"],
+[epub\:type="stretchdetail"],
+.stretchdetail {
+	display: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+}
+
+[epub-type="stretchdetail"].stretchtext-open,
+[epub\:type="stretchdetail"].stretchtext-open,
+.stretchdetail.stretchtext-open {
+	opacity: 1;
+	background-color: #ffffff;
+}
+
+[epub-type="stretchsummary"].stretchtext-open::after,
+[epub\:type="stretchsummary"].stretchtext-open::after,
+.stretchsummary.stretchtext-open::after {
+	content: "\00ab"; /* << character */
+}

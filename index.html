@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="src/stretchtext.css">
+		<script defer src="src/stretchtext.js"></script>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+
+			function showInfo(){
+
+				var div = document.getElementById("information-blocks");
+				var divs = div.children;
+				var checkboxes = document.getElementById('user-form').children;
+				var checks = [];
+				for(var i = 0; i < checkboxes.length; i++){
+					if(checkboxes[i].getAttribute('type')=='checkbox'){
+						checks.push(checkboxes[i]);
+					}
+				}
+				for (var j = 0; j < checks.length; j++) {
+					
+					if(checks[j].checked){
+						console.log(divs[j]);	
+						divs[j].style.display = 'block';
+					}
+					
+				}
+			}
+		</script>
+		<div class="container">
+
+	    	<img id ="trinity-logo" src="images/trinitylogoThree.jpg" alt="Logo" class="responsive" />    
+
+	  		<div id="banner">
+	  			<h1>Entrepreneurial Resources Available at Trinity College</h1>
+	  		</div>	
+
+	  	</div>
+
+  		<!---This is the checkbox a user fills in. Ticking boxes where appropriate based on their own needs.-->
+
+		<div id="user-form">
+			<h1> Tick all relevant boxes and we will see what resources are available to you. </h1>
+		  			<input type="checkbox" name="user-input" value="Money">I am looking for funding.<br>
+		  			<input type="checkbox" name-"user-input" value="Technology">I need to develop technological aspects of my business.<br>
+		  			<input type="checkbox" name="user-input" value="Workspace">I need workspace.<br>
+		 			
+  					<input type="button" onclick="showInfo()" value="Submit">		
+		</div>
+
+		<!--- the epub-type for semantic inflection-->
+
+		<div id="information-blocks">
+
+			<!-- FUNDING INFORMATION -->
+
+			<div id="funding" class='information-wrapper'>
+				
+
+				<h1>Funding</h1>
+					<p>Access to finance can be one of the biggest problems facing a business, whether it be in an early stage venture or as the company plans to expand. This research focusses on start-up businesses and identifies <span epub-type="stretchsummary">four common routes to financing new businesses:</span> <span epub-type="stretchdetail"> <br/><br/>
+
+
+					1. <span epub-type="stretchsummary">Bootstrap</span> <span epub-type="stretchdetail"> In the business context, bootstrap is a business with very little financial restraints or starting a business without parting with equity. This may involve personal or family savings; grants; competitions and accelerators; or taking on debt.</span> <br/> 
+
+					2. <span epub-type="stretchsummary">Grants, Accelerators and Competitions</span> <span epub-type="stretchdetail"> To fund the initial stage of their business many participants in the authors research entered competitions, took part in at least one accelerator and received grants. 
+
+					 </span><br/> 
+
+					3. <span epub-type="stretchsummary">Debt</span> <span epub-type="stretchdetail"> Whilst debt is not encouraged for early stage businesses, <a href="https://www.bankofireland.com/">Bank of Ireland</a> and <a href="http://www.microfinanceireland.ie/">Microfinance Ireland</a> are some of the institutions identified that will offer loans to early stage businesses.</span><br/> 
+
+					4. <span epub-type="stretchsummary">Equity</span> <span epub-type="stretchdetail">, three institutions were identified for offereing funding in return for equity: <a href="http://www.ndrc.ie">National Digital Research Centre (NDRC)</a>, <a href="https://www.enterprise-ireland.com/en/funding-supports/Company/HPSU-Funding/">Enterprise Ireland High Potential Start-Up Fund</a>, <a href="http://www.hban.org/">Angel Investment with Halo Business Angel Network (HBAN)</a> </span><br/>
+					</span>
+					</p>
+
+					<p>
+						A helpful way to generate funding in the early stage of a business is by entering competitions and start-up accelerators. Within TCD and in Dublin there are a variety of <span epub-type="stretchsummary">competitions and accelerators </span> <span epub-type="stretchdetail"><br/> 
+						<br/><a href="http://www.testrinity.com/dragons-den/" >Trinity Entrepreneurial Society's Dragon Den</a>
+						<br/><a href="http://www.testrinity.com/incubator-about/" >Trinity Entrepreneurial Society's Incubator</a>
+						<br/><a href="https://www.facebook.com/DUBES1929/" >Dublin University Business and Economics Society (DUBES)</a>
+						<br/><a href="http://enactusireland.org/" >Enactus Ireland</a>
+						<br/><a href="http://www.isef.ie/" >Irish Student's Entrepreneurship Forum</a>
+						<br/><a href="http://www.launchbox.ie" >Launchbox</a>
+						<br/><a href="https://www.tcd.ie/explore-innovation/validator/" >Validator</a>
+						<br/><a href="http://www.ucd.ie/innovation/entrepreneurs/" >Nova UCD</a>
+						<br/><a href="https://www.dcu.ie/node/21962" >DCU Ryan Academy-Propeller Venture Accelerator</a>
+						<br/><a href="http://www.dlrchamber.ie/dlr-business-awards-2018.html" >Business Innovation Awards</a>
+						<br/><a href="https://events.withgoogle.com/adoptastartup/" >Google Adopt a Start-Up</a>
+						<br/><a href="https://www.sandiego.edu/cpc/gsic/" >Global Social Innovation Challenge</a>
+						</span>
+					</p>
+
+
+				<p>Some companies require larger amounts of capital, for a variety of reasons. Often looking for <a href="#grants" epub-type="stretchsummary">more than €10,000</a>.</p>
+					<aside id="grants" epub-type="stretchdetail">
+						<p>For businesses looking to raise additional funding, there are <a epub-type="stretchsummary" href="#extra-funding-links">a variety of grants available.</a></p>
+							<ol id="extra-funding-links" epub-type="stretchdetail">
+								<li><a href="https://www.newfrontiers.ie/" >New Frontiers Phase One and Two</a></li> 
+								<li><a href="https://www.localenterprise.ie/Discover-Business-Supports/Financial-Supports/Feasibility-Grant/">Local Enterprise Office Feasability Grant</a></li>
+								<li><a href="https://www.localenterprise.ie/Discover-Business-Supports/Financial-Supports/Priming-Grant/Priming-Grants.html" >Local Enterprise Office Priming Grant</a></li>
+								<li><a href="https://www.enterprise-ireland.com/en/research-innovation/companies/collaborate-with-companies-research-institutes/innovation-voucher.shortcut.html" >Enterprise Ireland Innovation Voucher</a></li>
+								<li><a href="https://www.enterprise-ireland.com/en/funding-supports/company/hpsu-funding/competitive-start-fund-csf-.html" >Enterprise Ireland Competitive Start Fund</a></li>
+								<li><a href="https://www.enterprise-ireland.com/en/funding-supports/company/hpsu-funding/competitive-start-fund-csf-.html" >Enterprise Ireland Competitive Start Fund</a></li>
+							</ol>
+					</aside>
+
+				<p>Generating funding can be one of the most difficult tasks for entrepreneurs, especially whislt in college.</p>	
+			</div>
+
+			<!--Technology-->
+			<div id="technology" class='information-wrapper'>
+				<h1>Technology</h1>
+
+				<p>The level of technology intensity is a contributing factor in what resources one may use. When additional Research and Development are required, technology intensity is thought to be <span epub-type="stretchsummary">high.</span> <span epub-type="stretchdetail"> There are a variety of options within Trinity College Dublin and further afield where you can partner to work on technologically intense aspects of your product/service, such as <span epub-type="stretchsummary">Technology Transfer Offices (TTO's)</span> <span epub-type="stretchdetail"> A technology transfer is the transfer of technology from the originator to a secondary user. It occurs in a variety of different ways: from large businesses to smaller ones; from governments to businesses; from universities to businesses; across borders and among universities themselves. These TTO's are dedicated to identifying and exploiting research that has potential commercial interest. Many universities and institutes of technology have their own TTO. Nationally, Enterprise Ireland supports the Technology Transfer through the formation of <span epub-type="stretchsummary"> six consortia:</span> <span epub-type="stretchdetail"> <br/><br/>
+
+				1. <span epub-type="stretchsummary">Maynooth University Consortium </span> <span epub-type="stretchdetail">, which includes Maynooth University, Athlone Institute of Technology, Waterford Institute of Technology and Institute of Technology Carlow.</span> <br/> 
+				2. <span epub-type="stretchsummary">DRIC Consortium</span> <span epub-type="stretchdetail">, which includes Dublin Institute of Technology, Institute of Technology Tallaght, Institute of Technology Blanchardstown, National College of Ireland, Dun Laoghaire Institute of Art Design and Technology and Dublin Institute for Advanced Studies </span><br/> 
+				3. <span epub-type="stretchsummary">Dublin City University Consortium</span> <span epub-type="stretchdetail">, which includes Dublin City University and Dundalk Institute of Technology. </span><br/> 
+				4. <span epub-type="stretchsummary">Ignite West Consortium</span> <span epub-type="stretchdetail">, which includes National University of Ireland Galway, Letterkenny Institute of Technology, Galway Mayo Institute of Technology and Institute of Technology Sligo.</span><br/>
+				5. <span epub-type="stretchsummary">University of Limerick Consortium</span> <span epub-type="stretchdetail">, whcih includes University of Limerick, Cork Institute of Technology and Institute of Technology Tralee. </span><br/> 
+				6. <span epub-type="stretchsummary">UCT Consortium</span><span epub-type="stretchdetail">, which includes University College Cork, Cork Institute of Technology and Teagasc-Agriculture and Food Development Authority. </span> <br/>
+
+								
+				<br/>University College Dublin (UCD) and Trinity College Dublin (TCD) have formed their own TTO's, UCDinnovation and The Office of Corporate Partnership and Knowledge Exchange (OCPKE) helping to create <span epub-type="stretchsummary"> successful technology spin-outs.</span> <span epub-type="stretchdetail"> Successful Technology spin-outs in Ireland include: 
+				<br/> <a href="http://miravex.com/" >1. Miravex</a> 
+				<br/> <a href="www.astryne.ie/" >2. Astryne</a> ]
+				<br/> <a href="www.surewash.com" >3. Sure Wash</a>
+				<br/> <a href="www.cremeglobal.com/" >4. Creme Global</a>
+				<br/> <a href="https://www.swrve.com" >5. Swrve</a>
+				</span>
+
+				</p>
+
+				<p>When the technology intensity is lower, students can develop and research their business through projects, such as Final Year Projects.</p>	
+			</div>
+
+			<!-- Workspace-->
+			<div id="workspace" class='information-wrapper'>
+				<h1>Workspace</h1>
+
+				<p>Some start-ups need a small bit of funding to help start their business, often in the region of <span epub-type="stretchsummary">€500-€2,000. </span> <span epub-type="stretchdetail"> <br/> <br/>There are a variety of options within Trinity College Dublin and further afield where you could get this funding such as <span epub-type="stretchsummary">competitions and accelerators </span> <span epub-type="stretchdetail"> <br/> <br/>Launcbox etc etc etc</span> <br/> <br/> </span></p>
+
+
+				<p>Some companies need more funding than this, for a variety of reasons. Often looking for <a href="#funding-two-k-plus" epub-type="stretchsummary">more than €2,000</a>.</p>
+					<aside id="funding-two-k-plus" epub-type="stretchdetail">
+						<p>More details on where to find this additional funding.<a epub-type="stretchsummary" href="#more-links">More supporting evidence</a></p>
+							<ol id="more-links" epub-type="stretchdetail">
+								<li>First Link here.</li>
+								<li>Second link here.</li>
+								<li>Third link here.</li>
+								<li>Fourth link here.</li>
+								<li>Fifth link here.</li>
+							</ol>
+					</aside>
+
+				<p>Generating funding can be one of the most difficult tasks for entrepreneurs, especially whislt in college.</p>	
+			</div>				
+		</div>
+	</body>
+
+</html>
